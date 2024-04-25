@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    h1 Add Member to Project
+    form(action='/projects/' + projectId + '/add', method='POST', enctype='application/x-www-form-urlencoded')
+        p
+            label(for='ime_korisnika') User name:
+            input#ime_korisnika(type='text', name='ime_korisnika')
+        button(type='submit') Save
+        a(href='/projects/#{projectId}') Back to Project
